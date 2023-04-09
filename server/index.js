@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import path from 'path';
+
 import Connection from './database/db.js';
 import Routes from './routes/route.js';
 
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', Routes);
 
-app.use(express.static(path.join(__dirname, "../client/build")))
+
 
 const PORT = 8000;
 
